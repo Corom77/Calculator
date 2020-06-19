@@ -86,8 +86,9 @@ async def tangente(ctx,arg):
 
 @bot.command()
 async def racine(ctx,arg):
-    result = (arg)**0.5
+    result = int(arg)**0.5
     phrase = "La racinne carré de {} est {} .".format(str(arg), str(result))
+    await ctx.send(phrase)
 
 @bot.command()
 async def arctangente(ctx,arg):
@@ -106,5 +107,9 @@ async def arccosinus(ctx,arg):
     result = math.acos(float(arg))
     phrase = "L'arc cosinus de {} est {} .".format(str(arg),result)
     await ctx.send(phrase)
+
+
+
+
 
 bot.run(jeton)
