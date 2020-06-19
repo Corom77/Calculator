@@ -2,6 +2,9 @@ import discord
 import numpy as np
 from discord.ext import commands
 import math
+import datetime
+
+
 
 bot = commands.Bot(command_prefix='!')
 
@@ -108,8 +111,16 @@ async def arccosinus(ctx,arg):
     phrase = "L'arc cosinus de {} est {} .".format(str(arg),result)
     await ctx.send(phrase)
 
-
-
-
+@bot.command()
+async def time(ctx):
+    date = datetime.datetime.now()
+    phrase = "On est le {}/{}/{},il est actuellement {}:{} passé de {} secondes.".format(str(date.day), str(date.month),
+                                                                                         str(date.year), str(date.hour),
+                                                                                         str(date.minute),
+                                                                                         str(date.second))
+    await ctx.send(phrase)
+@bot.command()
+async def ping(ctx):
+    await ctx.send("Pong!")
 
 bot.run(jeton)
