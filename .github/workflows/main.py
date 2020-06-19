@@ -5,7 +5,7 @@ import math
 
 bot = commands.Bot(command_prefix='!')
 
-jeton = "NzExNTUwODYxNjMyOTk1MzYx.XsEsTA.an7fnNMOyqtvJpqGsvupscCQUnI"#add here your bottoken
+jeton = ""#add here your bottoken
 
 @bot.event
 async def on_ready():
